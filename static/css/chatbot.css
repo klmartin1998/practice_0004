@@ -1,3 +1,31 @@
 .user {
     color: blue;
 }
+
+input {
+    height: 36px;
+    width: 40%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px solid lightgray;
+}
+
+button {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    text-transform: lowercase;
+    text-align: left;
+}
