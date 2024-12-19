@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    #return render_template('home.html')
+    return "This is the new app"
+
 
 @app.route('/get_response/<query>')
 def retreive_respone(query):
