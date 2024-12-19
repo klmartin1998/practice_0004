@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-#from src.chatbot import *
+from src.chatbot import *
 
 app = Flask(__name__)
 
