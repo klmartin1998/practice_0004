@@ -20,5 +20,9 @@ def retreive_respone(query):
     return response_json
 
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

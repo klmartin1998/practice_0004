@@ -1,4 +1,5 @@
 const submitButton = document.getElementById("submit_buttom");
+const textBox = document.getElementById("query_box");
 
 async function get_query() {
     const inputEl = document.getElementById("query_box")
@@ -14,19 +15,19 @@ async function get_query() {
 function display_text(text, persona) {
     const inputNode = document.getElementById("query_box")
     const parentNode = document.getElementById("chat_content")
-    const liNode = document.createElement("li")
+    const divNode = document.createElement("div")
     
     if (persona == "user") {
-        liNode.setAttribute("class","user")
+        divNode.classList.add("user", "response")
     }
     else {
-        liNode.setAttribute("class","system")
+        divNode.classList.add("system", "response")
     }
     
-
-    liNode.innerText = persona+': '+text;
-    parentNode.appendChild(liNode);
+    divNode.innerText = persona+': '+text;
+    parentNode.appendChild(divNode);
     inputNode.value = '';
+    inputNode.focus();
 }
 
 async function get_response(query) {
@@ -37,4 +38,6 @@ async function get_response(query) {
     return response_json.text;
 }
 
+
 submitButton.addEventListener('click',get_query, false);
+textBox.focus();

@@ -1,11 +1,75 @@
-.user {
-    color: blue;
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 75%;
+    height: 85%;
+    position: absolute;
+    left: 10%;
+    
 }
 
-input {
-    height: 36px;
-    width: 40%;
+#chat_content {
+    display: grid;
+    flex-direction: column;
+    width: 100%;
     font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: auto;
+    
+    
+
+}
+
+#chat_content * {
+    overflow-anchor: none;
+}
+
+#anchor {
+    overflow-anchor: auto;
+    height: 1px;
+}
+
+
+.user {
+    background-color: rgb(101, 161, 230);
+    justify-self: right;
+    max-width: 40%;
+    
+}
+
+.system {
+    background-color: rgb(171, 171, 175);
+    justify-self: left;
+    max-width: 40%;
+}
+
+
+
+.response {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 10pt;
+    padding: 10px;
+}
+
+
+#input_field {
+    height: 36px;
+    width: 75%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    
+}
+
+#query_box {
+    width: 100%;
+    font-size: 20px;
+    color: gray;
     padding: 10px;
     border: none;
     border-bottom: 2px solid lightgray;
@@ -23,9 +87,16 @@ input:focus {
 }
 
 button {
+    width: 100px;
     font-size: 20px;
-    color: gray;
+    background-color: gray;
+    color: white;
     cursor: pointer;
     text-transform: lowercase;
-    text-align: left;
+    text-align: center;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    
 }
