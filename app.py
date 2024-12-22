@@ -29,20 +29,25 @@ def retreive_respone(query):
 
 @app.route('/process_login', methods=['POST'])
 def process_login():
-    data = request.json
-    print(data)
+    #data = request.json
+    #print(data)
     
+    data = request.form
+    username = data.get("username")
+    print(data)
+    print(username)
+    '''
     if (data['username'] == 'korymartin' and data['password'] == '12345'):
         response = {'status':'success'}
     else:
         response = {'status':'fail'}    
 
-
-    return response
+    '''
+    return redirect('/')
 
 @app.route('/process_signup', methods=['POST'])
 def process_signup():
-    data = request.json
+    data = request.form
     print(data)
     
     response = {'status':'success'}

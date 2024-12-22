@@ -6,15 +6,19 @@
 
     <body>
         <div class="container">
-            <fieldset>
-                <legend>Enter login information:</legend>
-                <label for="username" >Email or Username:</label>
-                <input id="username" type="text">
-
-                <label for="password">Password:</label>
-                <input id="password" type="password">
-                <button id="submit_button">Submit</button>
-            </fieldset>
+            <form action="/process_login" method="POST">
+                <fieldset>
+                    <legend>Enter login information:</legend>
+                    <label for="username" >Email or Username:</label>
+                    <input id="username" type="text" name="username">
+    
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="password">
+                    <button id="submit_button">Submit</button>
+                    <input type="submit" id="submit">Submit</submit>
+                </fieldset>
+            </form>
+            
         </div>
         <script src="static/js/login.js"></script>
     </body>
